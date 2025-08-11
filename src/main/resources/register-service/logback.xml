@@ -22,9 +22,9 @@
     </appender>
  
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/inventory.log</file>
+        <file>logs/register.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logs/inventory.log.%d{yyyy-MM-dd}.log.tar.gz</fileNamePattern>
+            <fileNamePattern>logs/register.log.%d{yyyy-MM-dd}.log.tar.gz</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
@@ -32,11 +32,9 @@
         </encoder>
     </appender>
 
-    <root level="INFO" additivity="true">
+    <root level="INFO" additivity="false">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>
-<logger name="org.springframework" level="ON" />
-	<logger name="org.apache" level="OFF" />
-	<logger name="kafka" level="OFF" />
+
 </configuration>

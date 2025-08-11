@@ -1,9 +1,8 @@
-	<!--<configuration> <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender"> 
+<!--<configuration> <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender"> 
 	<encoder> <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern> </encoder> 
 	</appender> <root level="info"> <appender-ref ref="CONSOLE"/> </root> </configuration> -->
-	<!DOCTYPE logback>
+<!DOCTYPE logback>
 <configuration>
-
 	<appender name="STDOUT"
 		class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
@@ -16,10 +15,10 @@
 
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/invnapp.log</file>
+		<file>logs/login.log</file>
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logs/invnapp.log.%d{yyyy-MM-dd}.log.tar.gz</fileNamePattern>
+			<fileNamePattern>logs/login.log.%d{yyyy-MM-dd}.log.tar.gz</fileNamePattern>
 			<maxHistory>7</maxHistory>
 		</rollingPolicy>
 		<encoder>
@@ -31,7 +30,9 @@
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
 	</root>
+	
 	<logger name="org.springframework" level="ON" />
-	<logger name="org.apache" level="OFF" />
+
+	<logger name="org.apache" level="ON" />
 	<logger name="kafka" level="OFF" />
 </configuration>
