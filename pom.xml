@@ -5,7 +5,7 @@
 
 	<groupId>com.pawar.inventory</groupId>
 	<artifactId>inventory-management-properties</artifactId>
-	<version>Dev_v2.1</version>
+	<version>Dev_v2.2</version>
 	<packaging>jar</packaging>
 	<name>inventory-management-properties</name>
 	<url>http://maven.apache.org</url>
